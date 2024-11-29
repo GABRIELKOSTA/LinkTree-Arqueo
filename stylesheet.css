@@ -1,0 +1,303 @@
+/* PARTE UTILIZADA PARA IMPORTAÇÃO DE FONTES */
+@font-face {
+  font-family: Montserrat;
+  src: url(./Fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Anton;
+  src: url(./Fonts/Anton/Anton-Regular.ttf);
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+/* IMAGEM COMO BACKGROUND */
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  text-align: center;
+
+  width: 100%;
+  height: 100vh; /* Não alterar tamanho */
+  background-image: url('./img/Fundo.png'); /* Imagen como background */
+  background-size: cover; /* Faz com que a imagem cubra todo o contêiner */
+  background-position: center;
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  margin-top: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titulo {
+  font-size: 57px;
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #fff;
+}
+
+.text.small {
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: normal;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.Caixa_Buttons {
+  display: flex;
+  flex-direction: column;
+  max-width: 356px;
+  gap: 10px;
+  justify-content: center;
+}
+
+.Buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image {
+  width: auto;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.logoAequeo {
+  width: 200px;
+  height: auto;
+  margin-top: 0px;
+  display: none;
+}
+
+/* Parte utilizada para criação de buttons e DOTs dinâmicos! */
+.dynamic-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 46px;
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: #fff;
+ 
+  border-radius: 50px;
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: #026101;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Montserrat;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Botão não expandido */
+.subitems-container {
+  display: flex;
+  width: 200px;
+  margin-bottom: 5px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subitem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  width: 180px;
+}
+
+/* Mostrar subitens */
+.dynamic-button.expanded + .subitem-container {
+  display: flex;
+}
+
+/*Mudar cor DOTS para branco ao passar o mouse*/
+/*
+.dynamic-button:hover .dot {
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 2px 0;
+}
+*/
+
+.button-text {
+  flex-grow: 1;
+}
+
+.LogoPNG {
+  height: 30px;
+  width: 30px;
+}
+
+/*
+.dots-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 2px 0;
+}
+*/
+
+/* Media Query para telas médias */
+@media (max-width: 1920PX) and (min-width: 672px) {
+  .dynamic-button {
+      font-size: 15px;
+      padding: 9px 14px;
+      width: 100%;
+  }
+
+  .buttons-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8px;
+      width: 500px;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    background-image: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .image {
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+    display: none;
+  }
+  
+  .logoAequeo {
+    width: auto;
+    height: auto;
+    margin-top: 0px;
+    display: block;
+  }
+
+  .titulo {
+    font-size: 57px;
+    font-family: Montserrat;
+    font-weight: bold;
+    color: #026101;
+    margin-top: 60px;
+  }
+  
+  .text.small {
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #026101;
+  }
+
+  .dynamic-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    height: 46px;
+    margin: 5px;
+    padding: 10px 15px;
+    background: linear-gradient(90deg, #11800A 0%, #D07508 100%);
+   
+    border-radius: 50px;
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Montserrat;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* Botão não expandido */
+.subitems-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-bottom: 5px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.subitem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  width: 180px;
+}
+
+/* Mostrar subitens */
+.dynamic-button.expanded + .subitem-container {
+  display: flex;
+}
+
+.dynamic-button:hover {
+  background-color: #fff;
+  color: white;
+}
+
+/*Mudar cor da logo para branco ao passar o mouse*/
+.dynamic-button:hover .LogoPNG {
+  filter: invert(0);
+}
+
+}
+
+
