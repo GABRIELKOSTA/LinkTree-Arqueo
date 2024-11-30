@@ -11,6 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 { text: "Facebook", url: "https://www.facebook.com/arqueoambiental/", img: "./img/logos/facebook.png" },
                 { text: "Threads", url: "https://www.threads.net/@arqueoambiental", img: "./img/logos/Threads.png" },
             ]
+        },
+        {
+            text: "Ebooks Grátis",
+            url: "#",
+            img: "./img/logos/Ebook.png",
+            subitems: [
+                { text: "Carros de bois", url: "/img/PDF/manual_modo_de_fazer_carros_de_bois_goias-1.pdf", img: "./img/logos/Ebook.png" },
+                { text: "Capoeira", url: "/img/PDF/mapeamento_genealogia_capoeira_goiania.pdf", img: "./img/logos/Ebook.png" },
+            ]
         },        
     ];
 
@@ -80,26 +89,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 item.subitems.forEach(function (subitem) {
                     const subitemButton = document.createElement('a');
                     subitemButton.className = 'dynamic-button subitem';
-                    subitemButton.href = subitem.url;
-                    subitemButton.target = '_blank';
-
+                
+                    // Verifique se o subitem é um PDF e defina o atributo 'download'
+                    if (subitem.url.endsWith(".pdf")) {
+                        subitemButton.href = subitem.url;  // O caminho completo para o PDF
+                        subitemButton.download = subitem.url.split('/').pop();  // Nome do arquivo, sem o caminho
+                    } else {
+                        subitemButton.href = subitem.url;
+                        subitemButton.target = '_blank';
+                    }
+                
                     const subitemText = document.createElement('span');
                     subitemText.className = 'button-text';
                     subitemText.textContent = subitem.text;
-
+                
                     const subitemImageLogo = document.createElement('img');
                     subitemImageLogo.className = 'LogoPNG';
                     subitemImageLogo.src = subitem.img;
-
+                
                     // Adicionar o texto e a imagem do subitem
                     subitemButton.appendChild(subitemText);
                     if (subitem.img) {
                         subitemButton.appendChild(subitemImageLogo);
                     }
-
+                
                     subitemsContainer.appendChild(subitemButton);
                 });
-
+                
                 Buttons.appendChild(subitemsContainer);
             }
         });
