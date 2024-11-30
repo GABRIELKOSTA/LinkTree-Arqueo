@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const items = [
         { text: "Página de inscrição", url: "https://jornadaarqueoambiental.com.br/inscricao", img: "./img/logos/Logo_icon.png", subitems: [] },
         {
-            text: "Redes",
+            text: "Redes Sociais",
             url: "#",
             img: "./img/logos/arroba.png",
             subitems: [
