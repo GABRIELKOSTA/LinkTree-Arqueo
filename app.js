@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
             url: "#",
             img: "./img/logos/Ebook.png",
             subitems: [
-                { text: "Carros de bois", url: "https://download1589.mediafire.com/lmy4efxfnolgYxwHEKjw0U_UDrmsMCQ0LhDVhiGmK54do4cxmEONWTHprcRY82GZK3yd_zEq3MQgyzw3YrKIy4PCKkC_xGWyBAU2mtlNl0G43WcDfwUFKevzQVkg2L-dM1UynWorFI_79yG86hKgVsZ1KCHl73FVPbROKr8HkM6D/tiedrpyh1r9cle8/manual_modo_de_fazer_carros_de_bois_goias-1.pdf", img: "./img/logos/Ebook.png" },
+                { text: "Carros de boi", url: "https://download1589.mediafire.com/lmy4efxfnolgYxwHEKjw0U_UDrmsMCQ0LhDVhiGmK54do4cxmEONWTHprcRY82GZK3yd_zEq3MQgyzw3YrKIy4PCKkC_xGWyBAU2mtlNl0G43WcDfwUFKevzQVkg2L-dM1UynWorFI_79yG86hKgVsZ1KCHl73FVPbROKr8HkM6D/tiedrpyh1r9cle8/manual_modo_de_fazer_carros_de_bois_goias-1.pdf", img: "./img/logos/Ebook.png" },
                 { text: "Capoeira", url: "https://download847.mediafire.com/wh5ubt0w8ywgch9qpjKl8xxAa25KXSsEn9isOSa41seYkUQW1jnSxqJojwxt1IBVMBMDajHGbvvurRHWn9ktYyZOgOvhkrKcVHfrnaH2qzq0FTrjFIowZ8F18vP5Axcz6nT5Hs15IDqQNdJ4TVmDxtDR-J1Ih-0u6RdVGlcbS6a8/zcdwxs2m4i22urw/mapeamento_genealogia_capoeira_goiania.pdf", img: "./img/logos/Ebook.png" },
             ]
         },        
