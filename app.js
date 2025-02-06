@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const items = [
         { text: "Diagnóstico estratégico", url: "http://wa.me/5531982570295", img: "./img/logos/Logo_icon.png", subitems: [] },
+        { text: "Página de Incrição", url: "https://jornadaarqueoambiental.com.br/inscricao", img: "./img/logos/Logo_icon.png", subitems: [] },
         {
             text: "Redes Sociais",
             url: "#",
